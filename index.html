@@ -64,6 +64,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-linux-kernel-trace-event" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/08/linux-kernel-trace-event/" class="article-date">
+  <time datetime="2017-01-08T09:22:48.000Z" itemprop="datePublished">2017-01-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/08/linux-kernel-trace-event/">linux_kernel_trace_event</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近要從 linux kernel 撈一些資料出來看，用 printk() 很沒效率，結果也不一定符合預期。</p>
+<p>找了一下 linux 內建的 <a href="https://www.kernel.org/doc/Documentation/trace/events.txt" target="_blank" rel="external">trace events</a></p>
+<p>用法滿直接的，把 debugfs mount 好之後就可以開始用了!</p>
+<p>先切換到底下路徑： /sys/kernel/debug/tracing </p>
+<p>裡面會有幾個資料夾和檔案，底下介紹我有用到的部分：</p>
+<ul>
+<li>available_events : 紀錄了一些可使用的events，像是 ext4、jbd2 等等</li>
+<li>set_event：將 available_events 中要 trace 的函式名稱複製到這個檔案就可以啟用了<br>也可以透過echo “ext4:*” &gt; set_event 來啟用某個特定的subsystem</li>
+<li>trace：event trace 的輸出會寫到這個檔案，可以透過 cat 輸出這個檔案到其他資料夾</li>
+<li>trace_pipe：如果要不中斷地輸出 event trace 的資料，可以 cat 這個檔案</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/08/linux-kernel-trace-event/" data-id="cixogs3lt0001jswocamzzed2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Android-Kernel-Compilation" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/01/02/Android-Kernel-Compilation/" class="article-date">
@@ -138,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/02/Android-Kernel-Compilation/" data-id="cixg6ml1l000038wonm1uou15" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/02/Android-Kernel-Compilation/" data-id="cixogs3lp0000jswoys1x4o5c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -182,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/02/hexo-tips/" data-id="cixg6ml20000238woru1es8pp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/02/hexo-tips/" data-id="cixogs3nu0002jswo4qti9p8v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
@@ -225,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/02/test/" data-id="cixg6ml20000138wohgzo8o1b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/02/test/" data-id="cixogs3ny0003jswouo96381z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
@@ -272,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/02/hello-world/" data-id="cixg6ml20000538wokq8q03w8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/02/hello-world/" data-id="cixogs3o90005jswooc1o7uak" class="article-share-link">Share</a>
       
       
     </footer>
@@ -331,6 +378,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/01/08/linux-kernel-trace-event/">linux_kernel_trace_event</a>
+          </li>
         
           <li>
             <a href="/2017/01/02/Android-Kernel-Compilation/">Android-Kernel-Compilation</a>
