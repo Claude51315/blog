@@ -53,7 +53,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -63,6 +63,94 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-vimNote" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/05/vimNote/" class="article-date">
+  <time datetime="2017-02-04T17:11:15.000Z" itemprop="datePublished">2017-02-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/05/vimNote/">vimNote</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>vim 用久了總要試著客製化，這篇就來紀錄一下吧！<br>我覺得一個好的文字編輯器要：</p>
+<ol>
+<li>配色要看的順眼</li>
+<li>有方便的快捷鍵(搜尋 取代 註解等等)</li>
+<li>自動完成</li>
+<li>Trace code 的功能(搜尋函式或變數宣告等等) </li>
+</ol>
+<p>現在有很多很方便的文字編輯器，選一個自己用的最順手的就好囉！<br>我的話因為大部分都在寫C，也滿習慣終端機的介面，歷久彌新的Vim就是最好選擇！</p>
+<p>使用 <a href="https://github.com/VundleVim/Vundle.vim" target="_blank" rel="external">vundle</a> 來管理套件，依照指示來修改.vimrc就可以開使用了。</p>
+<p>我目前使用的套件有</p>
+<ul>
+<li><p>狀態列：<a href="https://github.com/vim-airline/vim-airline" target="_blank" rel="external">airline</a><br>  還可以額外加入顯示git資訊以及選擇字型等等，在這邊就先不介紹拉。</p>
+<ul>
+<li>‘vim-airline/vim-airline’</li>
+<li>‘vim-airline/vim-airline-themes’</li>
+</ul>
+</li>
+<li><p>文件瀏覽：<a href="https://github.com/scrooloose/nerdtree" target="_blank" rel="external">NERDTree</a></p>
+<ul>
+<li>‘scrooloose/nerdtree’</li>
+</ul>
+</li>
+<li><p>搜尋定義：<a href="https://github.com/vim-scripts/taglist.vim" target="_blank" rel="external">taglist</a></p>
+<ul>
+<li>‘vim-scripts/taglist.vim’</li>
+</ul>
+</li>
+<li><p>自動完成：<a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">YouComleteMe</a></p>
+<ul>
+<li>‘Valloric/YouCompleteMe’</li>
+<li>安裝這個套件的話，vim在編譯時要加入 python support^[2]^，其他照著說明來安裝就好囉</li>
+</ul>
+</li>
+</ul>
+<p>外觀主題：</p>
+<ul>
+<li>‘sonph/onehalf’</li>
+</ul>
+<h1 id="Vim-Hot-keys"><a href="#Vim-Hot-keys" class="headerlink" title="Vim Hot keys"></a>Vim Hot keys</h1><p>Vim 可以自定義一些快捷鍵，操作起來可以更方便，不過有時候定義太多反而會造成困擾，我想先熟悉內建的熱鍵就好，有需要的話再加。</p>
+<p>以下列出幾個我目前覺得會比較常用到的</p>
+<h3 id="vim-window"><a href="#vim-window" class="headerlink" title="vim window:"></a>vim window:</h3><p>ctrl+w  :arrow_up: :arrow_down: :arrow_left: :arrow_right:<br>ctrl+w +v vertical split<br>ctrl+w +s horizontal split<br>ctrl+w +c close window<br>ctrl+w +T expand current window to new tab</p>
+<h3 id="vim-tab"><a href="#vim-tab" class="headerlink" title="vim tab"></a>vim tab</h3><p>:tabnew 創立新的tab<br>:tabNext 移至下一個tab</p>
+<h3 id="NERD-Tree"><a href="#NERD-Tree" class="headerlink" title="NERD Tree"></a>NERD Tree</h3><p><a href="http://usevim.com/2012/07/18/nerdtree" target="_blank" rel="external">nerd Tree Hotkeys</a>這篇寫了幾個滿基本的按鍵。</p>
+<h1 id="修改紀錄"><a href="#修改紀錄" class="headerlink" title="修改紀錄"></a>修改紀錄</h1><ul>
+<li>2017/2/5<br>心血來潮來重新設定vim，順便將用到的套件稍微整理一下，之後如果有用新的套件的話會陸陸續續更新在此文件。</li>
+</ul>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol>
+<li><a href="https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64" target="_blank" rel="external">YCM installation guide</a></li>
+<li><a href="http://stackoverflow.com/questions/3373914/compiling-vim-with-python-support" target="_blank" rel="external">Vim with python support</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/05/vimNote/" data-id="ciyri019g00013cwoeg401dcq" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/devTools/">devTools</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-linux-kernel-trace-event" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -101,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/08/linux-kernel-trace-event/" data-id="cixogs3lt0001jswocamzzed2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/08/linux-kernel-trace-event/" data-id="ciyri018500003cwoav8vej00" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -185,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/02/Android-Kernel-Compilation/" data-id="cixogs3lp0000jswoys1x4o5c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/02/Android-Kernel-Compilation/" data-id="ciyri01ab00053cwofn80cbqj" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -229,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/02/hexo-tips/" data-id="cixogs3nu0002jswo4qti9p8v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/02/hexo-tips/" data-id="ciyri019v00023cwobrr2e1i5" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
@@ -272,7 +360,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/02/test/" data-id="cixogs3ny0003jswouo96381z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/02/test/" data-id="ciyri019v00033cwo8nwczhcv" class="article-share-link">Delen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
@@ -319,7 +407,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/02/hello-world/" data-id="cixogs3o90005jswooc1o7uak" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/02/hello-world/" data-id="ciyri01aq000b3cwoq9nqfnm1" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -336,7 +424,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Categorieën</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Development/">Development</a></li></ul>
     </div>
@@ -346,9 +434,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Labels</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devTools/">devTools</a></li></ul>
     </div>
   </div>
 
@@ -358,16 +446,16 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/devTools/" style="font-size: 10px;">devTools</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
     </div>
   </div>
 
@@ -375,9 +463,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/02/05/vimNote/">vimNote</a>
+          </li>
         
           <li>
             <a href="/2017/01/08/linux-kernel-trace-event/">linux_kernel_trace_event</a>
@@ -393,10 +485,6 @@
         
           <li>
             <a href="/2017/01/02/test/">test</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/02/hello-world/">Hello World</a>
           </li>
         
       </ul>
